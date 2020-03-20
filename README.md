@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Fully responsive websites are fluid and will adapt to whatever screen/window size they're in. They'll also scale if you change your window size. Adaptive websites load different static layouts based on different screen size breakpoints and don't scale once they're already loaded.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first means taht you design the mobile version of the site and then make it responsive for larger breakpoints (tablet, desktop), while desktop first is the opposite - you create the desktop version first and then scale it down for different breakpoints.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+It sets the base font size of our HTML to 10px so that 1rem = 10px, 2rem = 20px etc.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is a way to give our CSS more functionality, versatility, and readability by allowing us to nest selectors and media queries, as well as create and use helpful variables and functions.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite thing in preprocessing is parametric mixins. The hardest part for me is functions (although we didn't cover those hardly at all).
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
@@ -50,12 +60,12 @@ Follow these steps to set up your project:
 
 ### Git Set up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [done] Create a forked copy of this project.
+- [done] Add your project manager as collaborator on Github.
+- [done] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [done] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [done] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [done] Push commits: git push origin `<firstName-lastName>`.
  
 Follow these steps for completing your project.
 
