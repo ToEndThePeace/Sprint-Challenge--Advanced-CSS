@@ -1,8 +1,11 @@
 // Navigation code here
 header {
-  height: 12vh;
-  background-color: @nav-bg;
+  height: @nav-height;
+  background-color: fadeout(@nav-bg, 10%);
   .botLine(@nav-border);
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   .container {
     height: 100%;
@@ -22,6 +25,9 @@ header {
 
       @media @phone {
         width: 100%;
+      }
+      @media @tablet {
+        width: 70%;
       }
 
       a {
