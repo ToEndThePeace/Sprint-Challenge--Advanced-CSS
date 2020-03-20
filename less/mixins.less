@@ -1,6 +1,7 @@
 // Mixins Here
-.botLine(@col) {
+.botLine(@col, @pad:0) {
   border-bottom: 2px solid @col;
+  padding-bottom: @pad;
 }
 .rndCorn(@rad) {
   border-radius: @rad;
@@ -31,7 +32,8 @@
   }
 }
 
-.btnStyle(@size, @rad) {
+.btnStyle(@size:1.6rem, @rad:5px) {
+  border: none;
   background-color: @btn-bg-color;
   color: @wild-sand;
   .rndCorn(@rad);
