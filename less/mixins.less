@@ -1,1 +1,59 @@
 // Mixins Here
+.botLine(@col, @pad:0) {
+  border-bottom: 2px solid @col;
+  padding-bottom: @pad;
+}
+.rndCorn(@rad) {
+  border-radius: @rad;
+}
+.animate(@name) {
+  animation-name: @name;
+  animation-timing-function: ease-out;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navAnim {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 5px @header-font-color;
+  }
+}
+@keyframes btnAnim {
+  from {
+    background-color: @btn-bg-color;
+    color: @wild-sand;
+  }
+  to {
+    background-color: @wild-sand;
+    color: @btn-bg-color;
+  }
+}
+
+.btnStyle(@size:1.6rem, @rad:5px) {
+  border: none;
+  background-color: @btn-bg-color;
+  color: @wild-sand;
+  .rndCorn(@rad);
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: @size;
+  cursor: pointer;
+  &:hover {
+    .animate(btnAnim);
+  }
+
+  @media @phone {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+  }
+  @media @tablet {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

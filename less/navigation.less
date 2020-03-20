@@ -1,1 +1,44 @@
 // Navigation code here
+header {
+  height: @nav-height;
+  background-color: fadeout(@nav-bg, 20%);
+  .botLine(@nav-border);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      font-size: 4rem;
+    }
+    nav {
+      width: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+
+      @media @phone {
+        width: 100%;
+      }
+      @media @tablet {
+        width: 70%;
+      }
+
+      a {
+        font-size: 1.6rem;
+        color: @river-bend;
+        text-decoration: none;
+
+        &:hover {
+          .animate(navAnim);
+        }
+      }
+    }
+  }
+}
