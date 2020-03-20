@@ -1,3 +1,21 @@
+@keyframes navAnim {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 5px #23293B;
+  }
+}
+@keyframes btnAnim {
+  from {
+    background-color: #22283A;
+    color: #F6F6F6;
+  }
+  to {
+    background-color: #F6F6F6;
+    color: #22283A;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -199,6 +217,12 @@ header .container nav a {
   color: #454A59;
   text-decoration: none;
 }
+header .container nav a:hover {
+  animation-name: navAnim;
+  animation-timing-function: ease-out;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -309,8 +333,10 @@ footer {
   cursor: pointer;
 }
 .home .walk .walk-text .btn:hover {
-  color: #22283A;
-  background-color: #F6F6F6;
+  animation-name: btnAnim;
+  animation-timing-function: ease-out;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {

@@ -5,6 +5,32 @@
 .rndCorn(@rad) {
   border-radius: @rad;
 }
+.animate(@name) {
+  animation-name: @name;
+  animation-timing-function: ease-out;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navAnim {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 5px @header-font-color;
+  }
+}
+@keyframes btnAnim {
+  from {
+    background-color: @btn-bg-color;
+    color: @wild-sand;
+  }
+  to {
+    background-color: @wild-sand;
+    color: @btn-bg-color;
+  }
+}
+
 .btnStyle(@size, @rad) {
   background-color: @btn-bg-color;
   color: @wild-sand;
@@ -14,19 +40,18 @@
   font-size: @size;
   cursor: pointer;
   &:hover {
-      color: @btn-bg-color;
-      background-color: @wild-sand;
+    .animate(btnAnim);
   }
 
   @media @phone {
-      display: block;
-      text-align: center;
-      padding: 20px 0;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
   }
   @media @tablet {
-      width: 50%;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
 }
