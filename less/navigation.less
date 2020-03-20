@@ -1,1 +1,30 @@
 // Navigation code here
+header {
+  height: 12vh;
+  background-color: @nav-bg;
+  .botLine(@nav-border);
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      font-size: 4rem;
+    }
+    nav {
+      width: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+
+      a {
+        font-size: 1.6rem;
+        color: @river-bend;
+        text-decoration: none;
+      }
+    }
+  }
+}
